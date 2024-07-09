@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  rust-dev:
+    image: rust-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../..:/workspaces
+    command: sleep infinity

@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "./HeroZen-API"
+		}
+	],
+	"settings": {
+		"settings": {
+			"editor.formatOnSave": true,
+		}
+	}
+}

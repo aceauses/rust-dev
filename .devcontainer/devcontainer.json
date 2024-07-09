@@ -1,0 +1,32 @@
+{
+	"name": "rust-dev",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "rust-dev",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"upgradePackages": "true"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"rust-lang.rust-analyzer",
+				"serayuzgur.crates",
+				"vadimcn.vscode-lldb",
+				"tamasfe.even-better-toml",
+				"GitHub.copilot-chat"
+			],
+			"settings": {
+				"rust-analyzer.cargo.useRustcWrapper": false,
+				"rust-analyzer.checkOnSave.command": "clippy"
+			}
+		}
+	},
+	"remoteUser": "vscode",
+	"postCreateCommand": "cargo --version",
+	"remoteEnv": {
+		"CARGO_HOME": "/home/vscode/.cargo"
+	}
+}
